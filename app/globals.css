@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Clean Industrial Palette */
+  --background: #F8FAFC; /* Slate 50 - Clean very light grey */
+  --foreground: #0F172A; /* Slate 900 - Dark industrial text */
+  
+  /* Brand Colors */
+  --primary: #D97706; /* Amber 600 - Gold/Wheat/Ochre */
+  --primary-hover: #B45309; /* Amber 700 */
+  --secondary: #334155; /* Slate 700 - Industrial Grey */
+  
+  /* Accents */
+  --accent-success: #15803d; /* Green 700 */
+  --accent-danger: #b91c1c; /* Red 700 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent-success: var(--accent-success);
+  --color-accent-danger: var(--accent-danger);
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
